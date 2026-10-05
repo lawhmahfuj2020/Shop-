@@ -78,7 +78,7 @@ textarea.in{min-height:96px;resize:vertical}
 nav.nv{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--card);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);padding-bottom:env(safe-area-inset-bottom,0px)}
 nav.nv button{border:0;background:transparent;min-height:62px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:12px;padding:0 2px;color:var(--mut);border-top:3px solid transparent}
 nav.nv button.on{color:var(--g);border-top-color:var(--gold);font-weight:700}
-#toast{position:fixed;left:50%;bottom:calc(90px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--g2);color:#F6F1E3;padding:10px 16px;border-radius:10px;font-size:14.5px;z-index:9;max-width:90%;text-align:center;display:none}
+#toast{position:fixed;left:50%;bottom:calc(90px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--g2);color:#F6F1E3;padding:10px 16px;border-radius:10px;font-size:14.5px;z-index:40;max-width:90%;text-align:center;display:none}
 .row2 .in{flex:1;min-width:0}
 .slip .subh{display:flex;justify-content:space-between;padding:6px 12px;background:#F5EFD9;font-weight:700;font-size:14px;color:var(--g);border-bottom:1px solid #E7DFC6}
 .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
@@ -120,7 +120,7 @@ var T={
 bn:{app:'দোকান হিসাব',tag:'দৈনিক খরচের খাতা',
  n_day:'দৈনিক',n_cal:'ক্যালেন্ডার',n_staff:'স্টাফ',n_month:'মাসিক',n_set:'সেটিং',
  pay:'পেমেন্ট',bazar:'বাজার',shop:'দোকান খরচ',adv:'অগ্রিম',
- sales:'আজকের বিক্রি',out:'আজকের মোট খরচ',left:'হাতে থাকে',total:'মোট',cash_in:'আজকের ক্যাশ',sales_tot:'আজকের মোট বিক্রি',formula:'বিক্রি = আজকের ক্যাশ + মোট খরচ',cal:'ক্যালেন্ডার',cal_hint:'যেকোনো দিনে চাপ দিলে ওই দিনের পুরো হিসাব দেখা যাবে। সবুজ = বিক্রি, ধূসর = খরচ।',all:'সব',all_note:'নতুন এন্ট্রি দিতে উপরে একটা সেকশন বেছে নিন।',advlist:'অগ্রিমের তালিকা',rate:'দিনের হার',extra_pay:'অতিরিক্ত দিনের পেমেন্ট',extra_note:'যোগদানের দিন থেকে মাস শেষ পর্যন্ত দিনের হারে আলাদা পেমেন্ট। পরের মাসের ১ তারিখ থেকে পূর্ণ মাসের বেতন।',extra_short:'অতিরিক্ত দিন',staffTab:'স্টাফ',guess_adv:'স্লিপে লেখা নেই, তাই অনুমানে অগ্রিম ধরা হয়েছে। বেতন হলে ধরন বদলান।',guess_sal:'টাকাটা বাকি বেতনের সমান বা বেশি, তাই বেতন ধরা হয়েছে। অগ্রিম হলে ধরন বদলান।',sal:'বেতন',ktype:'ধরন',paid:'বেতন দেওয়া হয়েছে',due:'বাকি',salist:'বেতন দেওয়ার তালিকা',as_adv:'স্টাফের নাম মিলেছে, তাই অগ্রিম হিসেবে যোগ হয়েছে',
+ sales:'আজকের বিক্রি',out:'আজকের মোট খরচ',left:'হাতে থাকে',total:'মোট',cash_in:'আজকের ক্যাশ',sales_tot:'আজকের মোট বিক্রি',formula:'বিক্রি = আজকের ক্যাশ + মোট খরচ',cal:'ক্যালেন্ডার',cal_hint:'যেকোনো দিনে চাপ দিলে ওই দিনের পুরো হিসাব দেখা যাবে। সবুজ = বিক্রি, ধূসর = খরচ।',all:'সব',all_note:'নতুন এন্ট্রি দিতে উপরে একটা সেকশন বেছে নিন।',advlist:'অগ্রিমের তালিকা',rate:'দিনের হার',extra_pay:'অতিরিক্ত দিনের পেমেন্ট',extra_note:'যোগদানের দিন থেকে মাস শেষ পর্যন্ত দিনের হারে আলাদা পেমেন্ট। পরের মাসের ১ তারিখ থেকে পূর্ণ মাসের বেতন।',extra_short:'অতিরিক্ত দিন',staffTab:'স্টাফ/শেয়ার',pwd:'শেয়ারহোল্ডার',e_partner:'আগে সেটিং-এ অংশীদার যোগ করুন',as_pwd:'শেয়ারহোল্ডারের নাম মিলেছে, তাই শেয়ারহোল্ডারের নেওয়া টাকা হিসেবে যোগ হয়েছে',taken:'নিয়েছেন',left_share:'লাভের বাকি অংশ',profit_share:'লাভের অংশ',pwdlist:'নেওয়ার তালিকা',pwd_note:'শেয়ারহোল্ডারের নেওয়া টাকা খরচ ধরা হয় না, তার লাভের অংশ থেকে কাটা যায়।',bad_row:'এই লাইনটা ঠিক করুন',guess_adv:'স্লিপে লেখা নেই, তাই অনুমানে অগ্রিম ধরা হয়েছে। বেতন হলে ধরন বদলান।',guess_sal:'টাকাটা বাকি বেতনের সমান বা বেশি, তাই বেতন ধরা হয়েছে। অগ্রিম হলে ধরন বদলান।',sal:'বেতন',ktype:'ধরন',paid:'বেতন দেওয়া হয়েছে',due:'বাকি',salist:'বেতন দেওয়ার তালিকা',as_adv:'স্টাফের নাম মিলেছে, তাই অগ্রিম হিসেবে যোগ হয়েছে',
  desc:'বিবরণ',amt:'টাকা',who:'স্টাফ',add:'এন্ট্রি যোগ করুন',
  ph_pay:'যেমন: চকলেট সাপ্লায়ারের বিল',ph_bazar:'যেমন: মাছ, সবজি',ph_shop:'যেমন: স্টাফ নাস্তা',ph_adv:'নোট (ঐচ্ছিক)',
  empty:'এই সেকশনে এখনো কিছু লেখা হয়নি।',del_q:'এই এন্ট্রি মুছে ফেলবেন?',
@@ -139,7 +139,7 @@ bn:{app:'দোকান হিসাব',tag:'দৈনিক খরচের �
 en:{app:'Dokan Hisab',tag:'Daily expense ledger',
  n_day:'Daily',n_cal:'Calendar',n_staff:'Staff',n_month:'Monthly',n_set:'Settings',
  pay:'Payment',bazar:'Bazar',shop:'Shop expense',adv:'Advance',
- sales:"Today's sales",out:"Today's total expense",left:'Left in hand',total:'Total',cash_in:"Today's cash",sales_tot:"Today's total sales",formula:"Sales = today's cash + total expense",cal:'Calendar',cal_hint:'Tap any day to see that whole day. Green = sales, grey = expense.',all:'All',all_note:'Pick a section above to add a new entry.',advlist:'Advances taken',rate:'Per-day rate',extra_pay:'Extra-days payment',extra_note:'Paid separately at the daily rate from the joining day to month end. Full monthly salary starts on the 1st of next month.',extra_short:'extra days',staffTab:'Staff',guess_adv:'The slip does not say, so this is guessed as an advance. Change the type if it is salary.',guess_sal:'The amount is at least the salary still due, so this is guessed as salary. Change the type if it is an advance.',sal:'Salary paid',ktype:'Type',paid:'Salary paid',due:'Still to pay',salist:'Salary payments',as_adv:'Matched a staff name, so added as an advance',
+ sales:"Today's sales",out:"Today's total expense",left:'Left in hand',total:'Total',cash_in:"Today's cash",sales_tot:"Today's total sales",formula:"Sales = today's cash + total expense",cal:'Calendar',cal_hint:'Tap any day to see that whole day. Green = sales, grey = expense.',all:'All',all_note:'Pick a section above to add a new entry.',advlist:'Advances taken',rate:'Per-day rate',extra_pay:'Extra-days payment',extra_note:'Paid separately at the daily rate from the joining day to month end. Full monthly salary starts on the 1st of next month.',extra_short:'extra days',staffTab:'Staff/Share',pwd:'Shareholder',e_partner:'Add a partner in Settings first',as_pwd:'Matched a shareholder name, so added as money taken by the shareholder',taken:'Taken',left_share:'Profit share left',profit_share:'Profit share',pwdlist:'Withdrawals',pwd_note:'Money a shareholder takes is not an expense; it is deducted from their profit share.',bad_row:'Fix this line',guess_adv:'The slip does not say, so this is guessed as an advance. Change the type if it is salary.',guess_sal:'The amount is at least the salary still due, so this is guessed as salary. Change the type if it is an advance.',sal:'Salary paid',ktype:'Type',paid:'Salary paid',due:'Still to pay',salist:'Salary payments',as_adv:'Matched a staff name, so added as an advance',
  desc:'Description',amt:'Amount',who:'Staff',add:'Add entry',
  ph_pay:'e.g. Chocolate supplier bill',ph_bazar:'e.g. Fish, vegetables',ph_shop:'e.g. Staff snacks',ph_adv:'Note (optional)',
  empty:'Nothing written in this section yet.',del_q:'Delete this entry?',
@@ -216,7 +216,7 @@ function staffName(id){for(var i=0;i<S.staff.length;i++)if(S.staff[i].id===id)re
 
 function monthData(ym){
  var a=ym.split('-').map(Number);var D=new Date(a[0],a[1],0).getDate();
- var sales=0,pay=0,bazar=0,shop=0,adv={},advL={},paid={},paidL={};
+ var sales=0,pay=0,bazar=0,shop=0,adv={},advL={},paid={},paidL={},pw={},pwL={};
  for(var k in S.days){
   if(k.slice(0,7)!==ym)continue;
   var dd=S.days[k];sales+=salesOf(dd);
@@ -224,6 +224,7 @@ function monthData(ym){
    if(e.type==='pay')pay+=e.amount;
    else if(e.type==='bazar')bazar+=e.amount;
    else if(e.type==='shop')shop+=e.amount;
+   else if(e.type==='pwd'){pw[e.partnerId]=(pw[e.partnerId]||0)+e.amount;(pwL[e.partnerId]=pwL[e.partnerId]||[]).push({day:k,amount:e.amount,desc:e.desc||''});}
    else if(e.type==='sal'){paid[e.staffId]=(paid[e.staffId]||0)+e.amount;(paidL[e.staffId]=paidL[e.staffId]||[]).push({day:k,amount:e.amount,desc:e.desc||''});}
    else if(e.type==='adv'){adv[e.staffId]=(adv[e.staffId]||0)+e.amount;(advL[e.staffId]=advL[e.staffId]||[]).push({day:k,amount:e.amount,desc:e.desc||''});}
   });
@@ -240,7 +241,7 @@ function monthData(ym){
  var costs=pay+shop+(S.bazarInProfit?bazar:0)+staffCost+mgrCost;
  var profit=sales-costs;
  var totalShare=S.partners.reduce(function(x,p){return x+p.share;},0);
- var parts=S.partners.map(function(p){return {p:p,amt:totalShare>0?profit*p.share/totalShare:0};});
+ var parts=S.partners.map(function(p){var amt=totalShare>0?profit*p.share/totalShare:0,tk=pw[p.id]||0;return {p:p,amt:amt,taken:tk,left:amt-tk,list:(pwL[p.id]||[]).slice().sort(function(a,b){return a.day<b.day?-1:1;})};});
  return {D:D,sales:sales,pay:pay,bazar:bazar,shop:shop,rows:rows,staffCost:staffCost,mgrCost:mgrCost,costs:costs,profit:profit,totalShare:totalShare,parts:parts};
 }
 
@@ -282,7 +283,7 @@ function viewCal(){
 function viewDay(){
  var dd=dayOf(ui.date);var out=sumE(dd.entries);var dt=parseDate(ui.date);
  var secs=['all','pay','bazar','shop','adv'];
- var list=ui.sec==='all'?dd.entries:dd.entries.filter(function(e){return ui.sec==='adv'?isStaffKind(e.type):e.type===ui.sec;});
+ var list=ui.sec==='all'?dd.entries:dd.entries.filter(function(e){return ui.sec==='adv'?(isStaffKind(e.type)||e.type==='pwd'):e.type===ui.sec;});
  var h='';
  h+='<div class="bar"><button class="ib" data-act="dprev" aria-label="prev">'+I.l+'</button><label class="mid"><span class="dmain">'+dlabel(ui.date)+'</span><span class="dsub">'+WD[S.lang][dt.getDay()]+'</span><input type="date" id="dpick" value="'+ui.date+'"></label><button class="ib" data-act="dnext" aria-label="next">'+I.r+'</button></div>';
  h+='<section class="ticket"><div class="trow"><span>'+t('cash_in')+'</span><input id="cash" class="sin" inputmode="decimal" value="'+(dd.cash!=null?dg(dd.cash):'')+'" placeholder="'+dg(0)+'"></div><div class="trow"><span>'+t('out')+'</span><b id="t-out">'+money(out)+'</b></div><div class="perf"></div><div class="trow big"><span>'+t('sales_tot')+'</span><b id="t-sales">'+money(salesOf(dd))+'</b></div></section>';
@@ -305,8 +306,9 @@ function viewDay(){
  if(ui.sec==='all')return h+'<section class="card"><p class="note">'+t('all_note')+'</p></section>';
  h+='<section class="card">';
  if(ui.sec==='adv'){
-  h+='<label class="fl" for="f-staff">'+t('who')+'</label><select id="f-staff" class="in">'+S.staff.map(function(s){return '<option value="'+s.id+'">'+esc(s.name)+'</option>';}).join('')+'</select>';
-  h+='<label class="fl" for="f-kind">'+t('ktype')+'</label><select id="f-kind" class="in"><option value="adv">'+t('adv')+'</option><option value="sal">'+t('sal')+'</option></select>';
+  var fk=ui.fkind||'adv',people=fk==='pwd'?S.partners:S.staff;
+  h+='<label class="fl" for="f-kind">'+t('ktype')+'</label><select id="f-kind" class="in"><option value="adv"'+(fk==='adv'?' selected':'')+'>'+t('adv')+'</option><option value="sal"'+(fk==='sal'?' selected':'')+'>'+t('sal')+'</option><option value="pwd"'+(fk==='pwd'?' selected':'')+'>'+t('pwd')+'</option></select>';
+  h+='<label class="fl" for="f-staff">'+(fk==='pwd'?t('pwd'):t('who'))+'</label><select id="f-staff" class="in">'+people.map(function(x){return '<option value="'+x.id+'">'+esc(x.name)+'</option>';}).join('')+'</select>';
  }
  h+='<label class="fl" for="f-desc">'+t('desc')+'</label><input id="f-desc" class="in" placeholder="'+esc(t('ph_'+ui.sec))+'">';
  h+='<label class="fl" for="f-amt">'+t('amt')+'</label><input id="f-amt" class="in" inputmode="decimal" placeholder="'+dg(0)+'">';
@@ -372,7 +374,20 @@ function viewMonth(){
  h+='</section>';
  h+='<section class="card"><h2>'+t('m_parts')+'</h2>';
  if(!m.parts.length)h+='<p class="note">'+t('m_noparts')+'</p>';
- else m.parts.forEach(function(x){h+=kv(esc(x.p.name)+' ('+dg(+x.p.share.toFixed(3))+')','<span class="'+(x.amt<0?'neg':'')+'">'+money(x.amt)+'</span>');});
+ else{
+  m.parts.forEach(function(x){
+   h+='<div style="padding:8px 0;border-top:1px solid var(--line)"><div class="nm" style="font-weight:700;font-size:17px">'+esc(x.p.name)+' <span class="pill">'+dg(+x.p.share.toFixed(3))+'</span></div>';
+   h+=kv(t('profit_share'),'<span class="'+(x.amt<0?'neg':'')+'">'+money(x.amt)+'</span>');
+   h+=kv(t('taken'),'-'+money(x.taken).replace('-',''));
+   h+=kv(t('left_share'),'<span class="'+(x.left<0?'neg':'')+'">'+money(x.left)+'</span>','strong');
+   if(x.list.length){
+    h+='<p class="sub" style="margin:10px 0 2px;font-weight:700">'+t('pwdlist')+'</p>';
+    x.list.forEach(function(a){h+=kv(dlabel(a.day)+(a.desc?' - '+esc(a.desc):''),money(a.amount));});
+   }
+   h+='</div>';
+  });
+  h+='<p class="hint">'+t('pwd_note')+'</p>';
+ }
  h+='</section>';
  h+='<section class="card"><h2>'+t('m_payable')+'</h2>';
  var any=false;
@@ -406,6 +421,7 @@ function render(){
  document.documentElement.lang=S.lang;
  var v={day:viewDay,cal:viewCal,staff:viewStaff,month:viewMonth,set:viewSet}[ui.tab]();
  $('#app').innerHTML=header()+'<main>'+v+'</main>'+nav()+(ui.rcptUrl?modal():'')+(ui.scan?scanModal():'');
+ if(ui.draft){var fd=document.getElementById('f-desc'),fa=document.getElementById('f-amt');if(fd)fd.value=ui.draft.desc;if(fa)fa.value=ui.draft.amt;ui.draft=null;}
  $('#printbox').innerHTML=ui.rcptUrl?'<img alt="" src="'+ui.rcptUrl+'">':'';
 }
 
@@ -415,7 +431,7 @@ function rfit(x,txt,maxW){
  while(txt.length>1&&x.measureText(txt+'…').width>maxW)txt=txt.slice(0,-1);
  return txt+'…';
 }
-function entryText(e){return isStaffKind(e.type)?((e.type==='sal'?t('sal')+' - ':'')+staffName(e.staffId)+(e.desc?' - '+e.desc:'')):e.desc;}
+function entryText(e){if(e.type==='pwd')return t('pwd')+' - '+partnerName(e.partnerId)+(e.desc?' - '+e.desc:'');return isStaffKind(e.type)?((e.type==='sal'?t('sal')+' - ':'')+staffName(e.staffId)+(e.desc?' - '+e.desc:'')):e.desc;}
 function paintReceipt(x,H){
  var dd=dayOf(ui.date),dt=parseDate(ui.date),R=RW-RP,y=0;
  var groups=[];
@@ -496,14 +512,30 @@ function downloadReceipt(){
  document.body.appendChild(a);a.click();document.body.removeChild(a);
 }
 
-var KINDS=['pay','bazar','shop','adv','sal'];
+var KINDS=['pay','bazar','shop','adv','sal','pwd'];
 function isStaffKind(k){return k==='adv'||k==='sal';}
 function secName(k){return k==='adv'?t('staffTab'):t(k);}
-function matchStaff(name){
+function partnerName(id){for(var i=0;i<S.partners.length;i++)if(S.partners[i].id===id)return S.partners[i].name;return '—';}
+function lev(a,b){
+ var m=a.length,n=b.length,d=[],i,j;
+ for(i=0;i<=m;i++){d[i]=[i];}
+ for(j=1;j<=n;j++)d[0][j]=j;
+ for(i=1;i<=m;i++)for(j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));
+ return d[m][n];
+}
+function matchIn(list,name,fuzzy){
  var n=String(name||'').trim().toLowerCase();if(!n)return '';
- for(var i=0;i<S.staff.length;i++){var sn=S.staff[i].name.trim().toLowerCase();if(sn&&(n===sn||n.indexOf(sn)===0))return S.staff[i].id;}
+ var i,sn;
+ for(i=0;i<list.length;i++){sn=list[i].name.trim().toLowerCase();if(sn&&(n===sn||n.indexOf(sn)===0))return list[i].id;}
+ if(fuzzy&&n.length>=3){
+  var best='',bd=99;
+  list.forEach(function(x){var q=x.name.trim().toLowerCase();if(q.length<3)return;var dd=lev(n,q),lim=q.length>=6?2:1;if(dd<=lim&&dd<bd){bd=dd;best=x.id;}});
+  return best;
+ }
  return '';
 }
+function matchStaff(name,fuzzy){return matchIn(S.staff,name,fuzzy);}
+function matchPartner(name,fuzzy){return matchIn(S.partners,name,fuzzy);}
 function shrinkImage(file){
  return new Promise(function(res,rej){
   var u=URL.createObjectURL(file),im=new Image();
@@ -518,13 +550,13 @@ function shrinkImage(file){
  });
 }
 async function callGemini(b64){
- var names=S.staff.map(function(x){return x.name;}).join(', ');
+ var names=S.staff.map(function(x){return x.name;}).join(', '),pnames=S.partners.map(function(x){return x.name;}).join(', ');
  var prompt='This is a photo of a handwritten daily expense slip from a shop in Bangladesh. Text may be Bangla or English; digits may be Bangla or English. '
   +'Return JSON only, in this exact shape: {"date":"YYYY-MM-DD or null","items":[{"section":"pay|bazar|shop","description":"short text as written","amount":number,"staff":"staff name or null","staff_kind":"salary|advance|null"}]}. '
   +'Section headings: বাজার = bazar, দোকান = shop, পেমেন্ট = pay. Each handwritten line under a heading becomes one item. '
-  +'If a line is a person\'s name with an amount (money taken by a staff member), put that name in "staff" and leave description empty. '
+  +'If a line is a person\'s name with an amount (money taken by a staff member), put that name in "staff" (a staff member or a shareholder) and leave description empty. '
   +'Set "staff_kind" to "salary" only if the line says বেতন or salary, "advance" only if it says অগ্রিম, advance or adv, otherwise null. '
-  +'Known staff names: '+(names||'none')+'. Amounts are in taka; ignore "/-", "=" and dashes. A date like 04.10.26 means day.month.year, so 2026-10-04. '
+  +'Known staff names: '+(names||'none')+'. Known shareholder names: '+(pnames||'none')+'. Amounts are in taka; ignore "/-", "=" and dashes. A date like 04.10.26 means day.month.year, so 2026-10-04. '
   +'Give your best reading of unclear words and never invent lines that are not on the slip.';
  var r=await fetch('https://generativelanguage.googleapis.com/v1beta/models/'+encodeURIComponent(S.geminiModel||'gemini-3.5-flash-lite')+':generateContent',{
   method:'POST',
@@ -540,8 +572,10 @@ async function callGemini(b64){
  var ym=(date||ui.date).slice(0,7),mrows=null;
  var items=(Array.isArray(o.items)?o.items:[]).map(function(it){
   var amt=toNum(it.amount),kind=KINDS.indexOf(it.section)>=0&&!isStaffKind(it.section)?it.section:'shop';
-  var desc=String(it.description||'').trim(),sid=matchStaff(it.staff||desc),guess=false;
-  if(sid){
+  var desc=String(it.description||'').trim(),who=String(it.staff||'').trim(),guess=false;
+  var sid=matchStaff(who,true)||matchStaff(desc),pid=sid?'':(matchPartner(who,true)||matchPartner(desc));
+  if(pid){desc='';kind='pwd';}
+  else if(sid){
    desc='';var hint=String(it.staff_kind||'').toLowerCase();
    if(hint==='salary')kind='sal';
    else if(hint==='advance')kind='adv';
@@ -552,7 +586,7 @@ async function callGemini(b64){
     if(row&&row.due>0&&isFinite(amt)&&amt>=row.due)kind='sal';
    }
   }
-  return {kind:kind,desc:desc,amount:(isFinite(amt)&&amt>0)?amt:'',staffId:sid,guess:guess};
+  return {kind:kind,desc:desc,amount:(isFinite(amt)&&amt>0)?amt:'',staffId:sid,partnerId:pid,guess:guess};
  });
  return {items:items,date:date};
 }
@@ -573,9 +607,10 @@ function scanModal(){
  h+='<label class="fl" for="sc-date">'+t('dt')+'</label><input id="sc-date" type="date" class="in" value="'+sc.date+'">';
  if(!sc.items.length)h+='<p class="note">'+t('sc_none')+'</p>';
  sc.items.forEach(function(it,i){
-  h+='<div class="card" style="padding:10px;margin:10px 0 0"><div class="row2" style="margin:0 0 8px"><select id="sc-k-'+i+'" class="in">'+KINDS.map(function(k){return '<option value="'+k+'"'+(it.kind===k?' selected':'')+'>'+t(k)+'</option>';}).join('')+'</select>';
+  h+='<div class="card" id="sc-row-'+i+'" style="padding:10px;margin:10px 0 0'+(sc.bad===i?';border:2px solid #9B2C2C':'')+'"><div class="row2" style="margin:0 0 8px"><select id="sc-k-'+i+'" class="in">'+KINDS.map(function(k){return '<option value="'+k+'"'+(it.kind===k?' selected':'')+'>'+t(k)+'</option>';}).join('')+'</select>';
   h+='<input id="sc-a-'+i+'" class="in" inputmode="decimal" placeholder="'+t('amt')+'" value="'+(it.amount===''?'':dg(it.amount))+'"></div><div class="row2" style="margin:0">';
-  if(isStaffKind(it.kind))h+='<select id="sc-s-'+i+'" class="in">'+S.staff.map(function(x){return '<option value="'+x.id+'"'+(it.staffId===x.id?' selected':'')+'>'+esc(x.name)+'</option>';}).join('')+'</select>';
+  if(it.kind==='pwd')h+='<select id="sc-p-'+i+'" class="in">'+S.partners.map(function(x){return '<option value="'+x.id+'"'+(it.partnerId===x.id?' selected':'')+'>'+esc(x.name)+'</option>';}).join('')+'</select>';
+  else if(isStaffKind(it.kind))h+='<select id="sc-s-'+i+'" class="in">'+S.staff.map(function(x){return '<option value="'+x.id+'"'+(it.staffId===x.id?' selected':'')+'>'+esc(x.name)+'</option>';}).join('')+'</select>';
   else h+='<input id="sc-d-'+i+'" class="in" placeholder="'+t('desc')+'" value="'+esc(it.desc)+'">';
   h+='<button class="ib sm" data-act="scdel" data-id="'+i+'" aria-label="delete">'+I.trash+'</button></div>';
   if(it.guess&&isStaffKind(it.kind))h+='<p class="hint" style="margin:6px 0 0">'+t('guess_'+it.kind)+'</p>';
@@ -584,34 +619,41 @@ function scanModal(){
  h+='<div class="row2"><button class="btn ghost" data-act="scadd">'+I.plus+t('sc_row')+'</button></div><button class="btn wide" data-act="scok">'+t('sc_ok')+'</button></div></div>';
  return h;
 }
+function badRow(i,msg){
+ ui.scan.bad=i;render();toast(msg,4000);
+ var el=document.getElementById('sc-row-'+i);if(el&&el.scrollIntoView)el.scrollIntoView({block:'center'});
+}
 function confirmScan(){
  var sc=ui.scan;if(!sc||sc.busy)return;
  if(!sc.items.length){toast(t('sc_none'));return;}
  for(var i=0;i<sc.items.length;i++){
   var it=sc.items[i];
-  if(!(it.amount>0)){toast(t('e_amt'));return;}
-  if(isStaffKind(it.kind)){if(!it.staffId){toast(t('e_staff'));return;}}
-  else if(!String(it.desc).trim()){toast(t('e_desc'));return;}
+  if(!(it.amount>0)){badRow(i,t('e_amt'));return;}
+  if(it.kind==='pwd'){if(!it.partnerId){badRow(i,t('e_partner'));return;}}
+  else if(isStaffKind(it.kind)){if(!it.staffId){badRow(i,t('e_staff'));return;}}
+  else if(!String(it.desc).trim()){badRow(i,t('e_desc'));return;}
  }
  var day=sc.date||ui.date,dd=ensureDay(day);
- sc.items.forEach(function(it){dd.entries.push({id:uid(),type:it.kind,desc:isStaffKind(it.kind)?'':String(it.desc).trim(),amount:it.amount,staffId:isStaffKind(it.kind)?it.staffId:null,scanned:true});});
+ sc.items.forEach(function(it){dd.entries.push({id:uid(),type:it.kind,desc:(isStaffKind(it.kind)||it.kind==='pwd')?'':String(it.desc).trim(),amount:it.amount,staffId:isStaffKind(it.kind)?it.staffId:null,partnerId:it.kind==='pwd'?it.partnerId:null,scanned:true});});
  ui.date=day;ui.scan=null;save();render();toast(t('added'));
 }
 
 function addEntry(){
- var amt=toNum(val('f-amt'));var desc=val('f-desc').trim();var sid=val('f-staff');var type=ui.sec,auto=false;
+ var amt=toNum(val('f-amt'));var desc=val('f-desc').trim();var sid=val('f-staff');var type=ui.sec,auto='';
  if(ui.sec==='adv'){
-  if(!S.staff.length){toast(t('e_staff'));return;}
-  type=val('f-kind')==='sal'?'sal':'adv';
+  var fk=val('f-kind');type=fk==='sal'?'sal':(fk==='pwd'?'pwd':'adv');
+  if(type==='pwd'){if(!S.partners.length){toast(t('e_partner'),3500);return;}}
+  else if(!S.staff.length){toast(t('e_staff'));return;}
  }else{
   if(!desc){toast(t('e_desc'));return;}
-  var ms=matchStaff(desc);
-  if(ms){type='adv';sid=ms;desc='';auto=true;}
+  var ms=matchStaff(desc),mp=ms?'':matchPartner(desc);
+  if(ms){type='adv';sid=ms;desc='';auto='as_adv';}
+  else if(mp){type='pwd';sid=mp;desc='';auto='as_pwd';}
  }
  if(!(amt>0)){toast(t('e_amt'));return;}
  var dd=ensureDay(ui.date);
- dd.entries.push({id:uid(),type:type,desc:desc,amount:amt,staffId:isStaffKind(type)?sid:null});
- save();render();toast(auto?t('as_adv'):t('added'),auto?3500:undefined);
+ dd.entries.push({id:uid(),type:type,desc:desc,amount:amt,staffId:isStaffKind(type)?sid:null,partnerId:type==='pwd'?sid:null});
+ save();render();toast(auto?t(auto):t('added'),auto?3500:undefined);
 }
 function saveStaff(){
  var name=val('s-name').trim();var sal=toNum(val('s-salary'));
@@ -688,14 +730,17 @@ document.addEventListener('change',function(ev){
   var f=e.files&&e.files[0];e.value='';if(f)processSlip(f);
  }else if(e.id==='sc-date'){
   if(ui.scan&&/^\d{4}-\d{2}-\d{2}$/.test(e.value))ui.scan.date=e.value;
- }else if(/^sc-[kads]-\d+$/.test(e.id)&&ui.scan){
-  var m=e.id.match(/^sc-([kads])-(\d+)$/),it=ui.scan.items[+m[2]];
+ }else if(/^sc-[kadsp]-\d+$/.test(e.id)&&ui.scan){
+  var m=e.id.match(/^sc-([kadsp])-(\d+)$/),it=ui.scan.items[+m[2]];
   if(it){
    if(m[1]==='a'){var v=toNum(e.value);it.amount=v>0?v:'';e.value=it.amount===''?'':dg(it.amount);}
    else if(m[1]==='d')it.desc=e.value;
    else if(m[1]==='s')it.staffId=e.value;
-   else{it.kind=e.value;it.guess=false;if(isStaffKind(it.kind)&&!it.staffId&&S.staff.length)it.staffId=S.staff[0].id;render();}
+   else if(m[1]==='p')it.partnerId=e.value;
+   else{it.kind=e.value;it.guess=false;if(isStaffKind(it.kind)&&!it.staffId&&S.staff.length)it.staffId=S.staff[0].id;if(it.kind==='pwd'&&!it.partnerId&&S.partners.length)it.partnerId=S.partners[0].id;render();}
   }
+ }else if(e.id==='f-kind'){
+  ui.fkind=e.value;ui.draft={desc:val('f-desc'),amt:val('f-amt')};render();
  }else if(e.id==='gem-key'){
   S.geminiKey=e.value.trim();save();
  }else if(e.id==='gem-model'){
